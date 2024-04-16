@@ -316,3 +316,11 @@ document.getElementById("search").addEventListener("click",function(){
     
     
 })
+function submitQuiz() {
+    var answers = [];
+    var radios = document.querySelectorAll('input[type="radio"]:checked');
+    radios.forEach(function(radio) {
+        answers.push(radio.value);
+    });
+    console.log(answers);
+}
